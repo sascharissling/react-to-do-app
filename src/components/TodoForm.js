@@ -19,11 +19,7 @@ const TodoInput = styled.input`
 `;
 
 export default function TodoForm({ addToDo }) {
-  const [value, setValue] = React.useState(localStorage.getItem("todo") || "");
-  
-  React.useEffect(() => {
-    localStorage.setItem("todo", value);
-  }, [value]);
+  const [value, setValue] = React.useState([]);
 
   function onChange(event) {
     setValue(event.target.value);
