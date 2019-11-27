@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import theme from "../utils/themes";
 
 const Form = styled.form`
   display: flex;
@@ -20,10 +19,13 @@ const TodoInput = styled.input`
 `;
 
 export default function TodoForm({ addToDo }) {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState(localStorage.getItem("todo") || "");
+  
+  React.useEffect(() => {
+    localStorage.setItem("todo", value);
+  }, [value]);
 
   function onChange(event) {
-    localStorage.setItem("todo", event.target.value);
     setValue(event.target.value);
   }
 
