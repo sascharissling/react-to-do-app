@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import theme from "../utils/themes";
 
 //STYLE Start
 const TodoItem = styled.div`
@@ -10,7 +9,6 @@ const TodoItem = styled.div`
   justify-content: space-between;
   border-radius: 15px;
   margin: 10px 5px 10px 5px;
-  /* height: 40px; */
   align-content: center;
   align-items: center;
   font-size: 1.5rem;
