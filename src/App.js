@@ -28,20 +28,7 @@ const AppContainer = styled.div`
 //STYLE End
 
 export default function App() {
-  const [todos, setToDos] = React.useState([
-    {
-      task: "wake up",
-      completed: false
-    },
-    {
-      task: "make coffee",
-      completed: false
-    },
-    {
-      task: "code",
-      completed: false
-    }
-  ]);
+  const [todos, setToDos] = React.useState([]);
 
   function addToDo(task) {
     const newToDos = [...todos, { task }];
